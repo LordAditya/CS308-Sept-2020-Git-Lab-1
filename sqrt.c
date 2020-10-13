@@ -4,6 +4,7 @@ positive number. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <complex.h>
 
 // Function to calculate square root of the number, provided through command line
 
@@ -15,11 +16,8 @@ int main(int argc, char* argv[]) {
 	}
 
 	int input = atoi(argv[1]);
-	if (input < 0) {
-		printf("Error: Input out of bounds (Negative Input)\n\n");
-		exit(-1);
-	}
-	printf("Sqrt of %d is %f\n",input,sqrt(input));
+	double complex s = csqrt(input);
+	printf("Sqrt of %d is %.3f + %.3fi\n ",input,creal(s),cimag(s));
 	printf("End of program. Exiting.");
 	return(0);
 
