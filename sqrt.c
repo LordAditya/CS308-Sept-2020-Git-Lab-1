@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
 
 	int input = atoi(argv[1]);
 	double complex s = csqrt(input);
-	printf("Sqrt of %d is %.3f + %.3fi\n ",input,creal(s),cimag(s));
+	printf("Sqrt of %d is %.2f + %.2fi\n ",input,creal(s),cimag(s));
 	printf("End of program. Exiting.");
 	return(0);
 
